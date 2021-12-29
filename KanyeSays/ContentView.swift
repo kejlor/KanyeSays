@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var vm = QuoteViewModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        List {
+            ForEach(vm.quotes) { quote in
+                Text(quote.quote)
+            }
+        }
+        Button {
+            vm.updateQuote()
+        } label: {
+            Text("Get Kanye quote")
+        }
+
     }
 }
 
