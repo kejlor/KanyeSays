@@ -10,19 +10,32 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var vm = QuoteViewModel()
-    
+        
     var body: some View {
-        List {
-            ForEach(vm.quotes) { quote in
-                Text(quote.quote)
+        VStack {
+            List {
+                Section {
+                    ForEach(vm.quotes) { quote in
+                        Text(quote.quote)
+                            .font(.headline)
+                    }
+                } header: {
+                    Text("Kanye says: ")
+                }
+            }
+            Button {
+                vm.updateQuote()
+            } label: {
+                Image(systemName: "goforward")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .background(
+                    Circle()
+                        .frame(width: 500, height: 50)
+                    )
+                    .padding()
             }
         }
-        Button {
-            vm.updateQuote()
-        } label: {
-            Text("Get Kanye quote")
-        }
-
     }
 }
 
