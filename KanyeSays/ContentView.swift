@@ -24,7 +24,7 @@ struct ContentView: View {
                 }
             }
             Button {
-                vm.updateQuote()
+                vm.getQuote()
             } label: {
                 Image(systemName: "goforward")
                     .font(.title)

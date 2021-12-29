@@ -14,22 +14,7 @@ class QuoteViewModel: ObservableObject {
     init() {
         getQuote()
     }
-    
-    func updateQuote() {
-        guard let url = URL(string: "https://api.kanye.rest") else { return }
         
-        downloadData(fromURL: url) { (returnedData) in
-            if let data = returnedData {
-                guard let newQuote = try? JSONDecoder().decode(QuoteModel.self, from: data) else { return }
-                DispatchQueue.main.async {
-                    self.quotes[0] = newQuote
-                }
-            } else {
-                print("No data returned")
-            }
-        }
-    }
-    
     func getQuote() {
         
         guard let url = URL(string: "https://api.kanye.rest") else { return }
@@ -38,7 +23,12 @@ class QuoteViewModel: ObservableObject {
             if let data = returnedData {
                 guard let newQuote = try? JSONDecoder().decode(QuoteModel.self, from: data) else { return }
                 DispatchQueue.main.async { [weak self] in
-                    self?.quotes.append(newQuote)
+                    guard let self = self else { return }
+                    if (self.quotes.isEmpty) {
+                        self.quotes.append(newQuote)
+                    } else {
+                        self.quotes[0] = newQuote
+                    }
                 }
             } else {
                 print("No data returned")
