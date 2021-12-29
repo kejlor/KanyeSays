@@ -11,6 +11,7 @@
 		E900CDC5277CD34400DDE9DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900CDC4277CD34400DDE9DF /* ContentView.swift */; };
 		E900CDC7277CD34500DDE9DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E900CDC6277CD34500DDE9DF /* Assets.xcassets */; };
 		E900CDCA277CD34500DDE9DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E900CDC9277CD34500DDE9DF /* Preview Assets.xcassets */; };
+		E900CDD4277CD3A800DDE9DF /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900CDD3277CD3A800DDE9DF /* QuoteModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		E900CDC4277CD34400DDE9DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E900CDC6277CD34500DDE9DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E900CDC9277CD34500DDE9DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E900CDD3277CD3A800DDE9DF /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,9 @@
 		E900CDC1277CD34400DDE9DF /* KanyeSays */ = {
 			isa = PBXGroup;
 			children = (
+				E900CDD2277CD35F00DDE9DF /* View */,
+				E900CDD1277CD35300DDE9DF /* ViewModel */,
+				E900CDD0277CD34E00DDE9DF /* Model */,
 				E900CDC2277CD34400DDE9DF /* KanyeSaysApp.swift */,
 				E900CDC4277CD34400DDE9DF /* ContentView.swift */,
 				E900CDC6277CD34500DDE9DF /* Assets.xcassets */,
@@ -65,6 +70,28 @@
 				E900CDC9277CD34500DDE9DF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E900CDD0277CD34E00DDE9DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E900CDD3277CD3A800DDE9DF /* QuoteModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E900CDD1277CD35300DDE9DF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E900CDD2277CD35F00DDE9DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E900CDD4277CD3A800DDE9DF /* QuoteModel.swift in Sources */,
 				E900CDC5277CD34400DDE9DF /* ContentView.swift in Sources */,
 				E900CDC3277CD34400DDE9DF /* KanyeSaysApp.swift in Sources */,
 			);
